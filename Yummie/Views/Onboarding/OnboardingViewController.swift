@@ -34,6 +34,8 @@ class OnboardingViewController: UIViewController {
             OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "slide3"))
         ]
         
+        pageControl.numberOfPages = slides.count
+        
     }
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
