@@ -16,6 +16,7 @@
 		A2F2DCA82948903C00546B5E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCA72948903C00546B5E /* UIView+Extension.swift */; };
 		A2F2DCAA294890EF00546B5E /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCA9294890EF00546B5E /* OnboardingSlide.swift */; };
 		A2F2DCAC294892F500546B5E /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCAB294892F500546B5E /* OnboardingCollectionViewCell.swift */; };
+		A2F2DCAF2948E50800546B5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCAE2948E50800546B5E /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A2F2DCA72948903C00546B5E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2F2DCA9294890EF00546B5E /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		A2F2DCAB294892F500546B5E /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2F2DCAE2948E50800546B5E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		A2F2DCA0294889F900546B5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2F2DCAD2948E4E700546B5E /* Home */,
 				A2F2DCA329488A1300546B5E /* Onboarding */,
 			);
 			path = Views;
@@ -122,6 +125,14 @@
 				A2F2DCA72948903C00546B5E /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A2F2DCAD2948E4E700546B5E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A2F2DCAE2948E50800546B5E /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				A2103FF9294342D700BB6C0B /* SceneDelegate.swift in Sources */,
 				A2F2DCA82948903C00546B5E /* UIView+Extension.swift in Sources */,
 				A2F2DCA529488A3600546B5E /* OnboardingViewController.swift in Sources */,
+				A2F2DCAF2948E50800546B5E /* HomeViewController.swift in Sources */,
 				A2F2DCAC294892F500546B5E /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
