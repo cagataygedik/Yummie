@@ -7,14 +7,13 @@
 
 import UIKit
 
-@IBDesignable extension UIButton {
-    
+extension UIView {
     @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
         get {
-            return layer.cornerRadius
+            return cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
         }
     }
 }
