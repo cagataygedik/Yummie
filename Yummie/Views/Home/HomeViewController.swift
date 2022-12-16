@@ -8,9 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
+    @IBOutlet weak var specialsCollectionView: UICollectionView!
     
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Dish", image: "https://picsum.photos/200/300"),
@@ -26,16 +27,22 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "Cato", description: "this is the best I have ever tasted", image: "https://picsum.photos/200/300" , calories: 34)
     ]
     
+    var specials: [Dish] = [
+        .init(id: "id1", name: "Fried Plantain", description: "this is my fav dish.", image: "https://picsum.photos/200/300" , calories: 345),
+        .init(id: "id1", name: "Beans and Garri", description: "awesome meal.", image: "https://picsum.photos/200/300" , calories: 134),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerCells()
-
+        
     }
     
     private func registerCells() {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         popularCollectionView.register(UINib(nibName: DishPortraitCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishPortraitCollectionViewCell.identifier)
+        specialsCollectionView.register(UINib(nibName: DishLandscapeCollectionViewCell.identifier , bundle: nil), forCellWithReuseIdentifier: DishLandscapeCollectionViewCell.identifier)
     }
 }
 
@@ -49,6 +56,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         case popularCollectionView:
             return populars.count
+            
+        case specialsCollectionView:
+            return specials.count
             
         default:
             return 0
@@ -68,6 +78,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishPortraitCollectionViewCell.identifier, for: indexPath) as! DishPortraitCollectionViewCell
             cell.setup(dish: populars[indexPath.row])
+            return cell
+            
+        case specialsCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishLandscapeCollectionViewCell.identifier, for: indexPath) as! DishLandscapeCollectionViewCell
+            cell.setup(dish: specials[indexPath.row])
             return cell
             
         default:

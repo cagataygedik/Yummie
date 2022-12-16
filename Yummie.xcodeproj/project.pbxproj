@@ -18,6 +18,8 @@
 		A24BC53D2949B97F00F181AB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BC53C2949B97F00F181AB /* String+Extension.swift */; };
 		A24BC5402949BDFB00F181AB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BC53F2949BDFB00F181AB /* CardView.swift */; };
 		A274E601294A71D2001BBD84 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = A274E600294A71D2001BBD84 /* Dish.swift */; };
+		A2B8959D294D0D5D00A21549 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B8959B294D0D5D00A21549 /* DishLandscapeCollectionViewCell.swift */; };
+		A2B8959E294D0D5D00A21549 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B8959C294D0D5D00A21549 /* DishLandscapeCollectionViewCell.xib */; };
 		A2B8AD13294A6B9D00267594 /* DishPortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B8AD11294A6B9D00267594 /* DishPortraitCollectionViewCell.swift */; };
 		A2B8AD14294A6B9D00267594 /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B8AD12294A6B9D00267594 /* DishPortraitCollectionViewCell.xib */; };
 		A2F2DCA529488A3600546B5E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCA429488A3600546B5E /* OnboardingViewController.swift */; };
@@ -43,6 +45,8 @@
 		A24BC53C2949B97F00F181AB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A24BC53F2949BDFB00F181AB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A274E600294A71D2001BBD84 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		A2B8959B294D0D5D00A21549 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2B8959C294D0D5D00A21549 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2B8AD11294A6B9D00267594 /* DishPortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPortraitCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2B8AD12294A6B9D00267594 /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2F2DCA429488A3600546B5E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		A23F4FA92949B2B800519A91 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				A2B8959A294D0D3700A21549 /* DishLandscapeCollectionViewCell */,
 				A2B8AD0E294A6B4D00267594 /* DishPortraitCollectionViewCell */,
 				A23F4FAA2949B2C300519A91 /* CategoryCollectionViewCell */,
 			);
@@ -133,6 +138,15 @@
 				A24BC53F2949BDFB00F181AB /* CardView.swift */,
 			);
 			path = CardView;
+			sourceTree = "<group>";
+		};
+		A2B8959A294D0D3700A21549 /* DishLandscapeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2B8959B294D0D5D00A21549 /* DishLandscapeCollectionViewCell.swift */,
+				A2B8959C294D0D5D00A21549 /* DishLandscapeCollectionViewCell.xib */,
+			);
+			path = DishLandscapeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		A2B8AD0D294A613A00267594 /* Delegates */ = {
@@ -287,6 +301,7 @@
 				A2104003294342D700BB6C0B /* LaunchScreen.storyboard in Resources */,
 				A2B8AD14294A6B9D00267594 /* DishPortraitCollectionViewCell.xib in Resources */,
 				A2104000294342D700BB6C0B /* Assets.xcassets in Resources */,
+				A2B8959E294D0D5D00A21549 /* DishLandscapeCollectionViewCell.xib in Resources */,
 				A2103FFE294342D700BB6C0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +363,7 @@
 				A2F2DCA529488A3600546B5E /* OnboardingViewController.swift in Sources */,
 				A2F2DCAF2948E50800546B5E /* HomeViewController.swift in Sources */,
 				A23F4FB02949B46200519A91 /* DishCategory.swift in Sources */,
+				A2B8959D294D0D5D00A21549 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				A24BC53D2949B97F00F181AB /* String+Extension.swift in Sources */,
 				A24BC5402949BDFB00F181AB /* CardView.swift in Sources */,
 				A2F2DCAC294892F500546B5E /* OnboardingCollectionViewCell.swift in Sources */,
