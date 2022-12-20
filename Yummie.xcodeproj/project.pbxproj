@@ -29,6 +29,9 @@
 		A2F2DCAC294892F500546B5E /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCAB294892F500546B5E /* OnboardingCollectionViewCell.swift */; };
 		A2F2DCAF2948E50800546B5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DCAE2948E50800546B5E /* HomeViewController.swift */; };
 		A2F6A1612950F6C800DB80DC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6A1602950F6C800DB80DC /* UIViewController+Extension.swift */; };
+		A2F6A1662950FBD500DB80DC /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6A1642950FBD500DB80DC /* DishListTableViewCell.swift */; };
+		A2F6A1672950FBD500DB80DC /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F6A1652950FBD500DB80DC /* DishListTableViewCell.xib */; };
+		A2F6A16A295104A300DB80DC /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6A169295104A300DB80DC /* ListDishesViewController.swift */; };
 		A4CB0E880C143E01835FE6E3 /* Pods_Yummie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D3685FB06FD1B2CEA73BA7 /* Pods_Yummie.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		A2F2DCAB294892F500546B5E /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2F2DCAE2948E50800546B5E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2F6A1602950F6C800DB80DC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A2F6A1642950FBD500DB80DC /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
+		A2F6A1652950FBD500DB80DC /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
+		A2F6A169295104A300DB80DC /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
 		D0D3685FB06FD1B2CEA73BA7 /* Pods_Yummie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C0CBC5C6D6E4D66F4CE02 /* Pods-Yummie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummie.debug.xcconfig"; path = "Target Support Files/Pods-Yummie/Pods-Yummie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +188,7 @@
 		A2F2DC9F294889EB00546B5E /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				A2F6A1622950FB6700DB80DC /* TableViewCells */,
 				A24BC53E2949BDEC00F181AB /* CardView */,
 				A23F4FA92949B2B800519A91 /* CollectionViewCells */,
 			);
@@ -191,6 +198,7 @@
 		A2F2DCA0294889F900546B5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2F6A1682951048200DB80DC /* ListDishes */,
 				A2A3B53F294E24E300A7EDA3 /* DishDetail */,
 				A2F2DCAD2948E4E700546B5E /* Home */,
 				A2F2DCA329488A1300546B5E /* Onboarding */,
@@ -240,6 +248,31 @@
 				A2F2DCAE2948E50800546B5E /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A2F6A1622950FB6700DB80DC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A2F6A1632950FB7500DB80DC /* DishListTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		A2F6A1632950FB7500DB80DC /* DishListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2F6A1642950FBD500DB80DC /* DishListTableViewCell.swift */,
+				A2F6A1652950FBD500DB80DC /* DishListTableViewCell.xib */,
+			);
+			path = DishListTableViewCell;
+			sourceTree = "<group>";
+		};
+		A2F6A1682951048200DB80DC /* ListDishes */ = {
+			isa = PBXGroup;
+			children = (
+				A2F6A169295104A300DB80DC /* ListDishesViewController.swift */,
+			);
+			path = ListDishes;
 			sourceTree = "<group>";
 		};
 		E69EB425536EE6E1B6AA73C7 /* Pods */ = {
@@ -312,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23F4FAE2949B2E000519A91 /* CategoryCollectionViewCell.xib in Resources */,
+				A2F6A1672950FBD500DB80DC /* DishListTableViewCell.xib in Resources */,
 				A2104003294342D700BB6C0B /* LaunchScreen.storyboard in Resources */,
 				A2B8AD14294A6B9D00267594 /* DishPortraitCollectionViewCell.xib in Resources */,
 				A2104000294342D700BB6C0B /* Assets.xcassets in Resources */,
@@ -369,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F6A1662950FBD500DB80DC /* DishListTableViewCell.swift in Sources */,
 				A2F6A1612950F6C800DB80DC /* UIViewController+Extension.swift in Sources */,
 				A23F4FAD2949B2E000519A91 /* CategoryCollectionViewCell.swift in Sources */,
 				A2F2DCAA294890EF00546B5E /* OnboardingSlide.swift in Sources */,
@@ -382,6 +417,7 @@
 				A2B8959D294D0D5D00A21549 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				A24BC53D2949B97F00F181AB /* String+Extension.swift in Sources */,
 				A24BC5402949BDFB00F181AB /* CardView.swift in Sources */,
+				A2F6A16A295104A300DB80DC /* ListDishesViewController.swift in Sources */,
 				A2F2DCAC294892F500546B5E /* OnboardingCollectionViewCell.swift in Sources */,
 				A274E601294A71D2001BBD84 /* Dish.swift in Sources */,
 				A2B8AD13294A6B9D00267594 /* DishPortraitCollectionViewCell.swift in Sources */,
