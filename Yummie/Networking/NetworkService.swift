@@ -13,11 +13,11 @@ struct NetworkService {
     
     private init() {}
     
-    func myFirstRequest() {
-        request(route: .temp, method: .get, type: String.self, completion: { _ in })
+    func myFirstRequest(completion: @escaping(Result<[Dish], Error>) -> Void) {
+        request(route: .temp, method: .get, completion: completion)
     }
     
-    private func request<T: Codable>(route: Route, method:Method, parameters: [String: Any]? = nil, type: T.Type, completion:(Result<T, Error>) -> Void) {
+    private func request<T: Decodable>(route: Route, method:Method, parameters: [String: Any]? = nil, completion: @escaping(Result<T, Error>) -> Void) {
         
         guard let request = createRequest(route: route, method: method, parameters: parameters) else {
             completion(.failure(AppError.unknownError))
@@ -29,7 +29,7 @@ struct NetworkService {
             if let data = data {
                 result = .success(data)
                 let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
-                print("The response is: \(responseString)")
+//                print("The response is: \(responseString)")
                 
             } else if let error = error {
                 result = .failure(error)
@@ -37,10 +37,40 @@ struct NetworkService {
             }
             
             DispatchQueue.main.async {
-                // TODO: Decode our result and send back to the user.
+                self.handleResponse(result: result, completion: completion)
             }
         }.resume()
+    }
+    
+    private func handleResponse<T: Decodable>(result: Result<Data, Error>?, completion: (Result<T, Error>) -> Void) {
         
+        guard let result = result else {
+            completion(.failure(AppError.unknownError))
+            return
+        }
+        switch result {
+            
+        case .success(let data):
+            let decoder = JSONDecoder()
+            guard let response = try? decoder.decode(ApiResponse<T>.self, from: data) else {
+                completion(.failure(AppError.errorDecoding))
+                return
+            }
+            if let error = response.error {
+                completion(.failure(AppError.serverError(error)))
+                return
+            }
+            
+            if let decodedData = response.data {
+                completion(.success(decodedData))
+                
+            } else {
+                completion(.failure(AppError.unknownError))
+            }
+            
+        case .failure(let error):
+            completion(.failure(error))
+        }
     }
     
     /// This function helps us to generate a urlRequest
