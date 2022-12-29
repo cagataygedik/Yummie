@@ -12,6 +12,7 @@
 		A2103FFE294342D700BB6C0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2103FFC294342D700BB6C0B /* Main.storyboard */; };
 		A2104000294342D700BB6C0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2103FFF294342D700BB6C0B /* Assets.xcassets */; };
 		A2104003294342D700BB6C0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2104001294342D700BB6C0B /* LaunchScreen.storyboard */; };
+		A231FA9C295C70FF00F55A0B /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231FA9B295C70FF00F55A0B /* AllDishes.swift */; };
 		A23F4FAD2949B2E000519A91 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F4FAB2949B2E000519A91 /* CategoryCollectionViewCell.swift */; };
 		A23F4FAE2949B2E000519A91 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A23F4FAC2949B2E000519A91 /* CategoryCollectionViewCell.xib */; };
 		A23F4FB02949B46200519A91 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F4FAF2949B46200519A91 /* DishCategory.swift */; };
@@ -51,6 +52,7 @@
 		A2103FFF294342D700BB6C0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2104002294342D700BB6C0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2104004294342D700BB6C0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A231FA9B295C70FF00F55A0B /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
 		A23F4FAB2949B2E000519A91 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A23F4FAC2949B2E000519A91 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		A23F4FAF2949B46200519A91 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				A23F4FAF2949B46200519A91 /* DishCategory.swift */,
 				A274E600294A71D2001BBD84 /* Dish.swift */,
 				A28ED82E29524E4E004E6475 /* Order.swift */,
+				A231FA9B295C70FF00F55A0B /* AllDishes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				A23F4FAD2949B2E000519A91 /* CategoryCollectionViewCell.swift in Sources */,
 				A2F2DCAA294890EF00546B5E /* OnboardingSlide.swift in Sources */,
 				A2103FF7294342D700BB6C0B /* AppDelegate.swift in Sources */,
+				A231FA9C295C70FF00F55A0B /* AllDishes.swift in Sources */,
 				A2103FF9294342D700BB6C0B /* SceneDelegate.swift in Sources */,
 				A2617BE329559D4700DD6EBF /* Method.swift in Sources */,
 				A2F2DCA82948903C00546B5E /* UIView+Extension.swift in Sources */,

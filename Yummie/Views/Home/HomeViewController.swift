@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
     
@@ -13,43 +14,33 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
     
-    var categories: [DishCategory] = [
-        .init(id: "id1", name: "Dish", image: "https://picsum.photos/200/300"),
-        .init(id: "id1", name: "Dish 2", image: "https://picsum.photos/200/300"),
-        .init(id: "id1", name: "Dish 3", image: "https://picsum.photos/200/300"),
-        .init(id: "id1", name: "Dish 4", image: "https://picsum.photos/200/300"),
-        .init(id: "id1", name: "Dish 5", image: "https://picsum.photos/200/300")
-    ]
-    
-    var populars: [Dish] = [
-        .init(id: "id1", name: "garri", description: "this is the best I have ever tasted", image: "https://picsum.photos/200/300" , calories: 345),
-        .init(id: "id1", name: "Indomie", description: "this is the best  I have ever tasted", image: "https://picsum.photos/200/300" , calories: 134),
-        .init(id: "id1", name: "Cato", description: "this is the best I have ever tasted", image: "https://picsum.photos/200/300" , calories: 34)
-    ]
-    
-    var specials: [Dish] = [
-        .init(id: "id1", name: "Fried Plantain", description: "this is my fav dish.", image: "https://picsum.photos/200/300" , calories: 345),
-        .init(id: "id1", name: "Beans and Garri", description: "awesome meal.", image: "https://picsum.photos/200/300" , calories: 134),
-    ]
+    var categories: [DishCategory] = []
+    var populars: [Dish] = []
+    var specials: [Dish] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkService.shared.myFirstRequest { (result) in
-            switch result {
-                
-            case .success(let data):
-                for dish in data {
-                    print(dish.name ?? "")
-                }
-            
-            case .failure(let error):
-                print("The error is: \(error.localizedDescription)")
-            }
-        }
-
         registerCells()
         
+        ProgressHUD.show()
+        
+        NetworkService.shared.fetchAllCategories { [weak self] (result) in
+            switch result {
+            case .success(let allDishes):
+                ProgressHUD.dismiss()
+                self?.categories = allDishes.categories ?? []
+                self?.populars = allDishes.populars ?? []
+                self?.specials = allDishes.specials ?? []
+                
+                self?.categoryCollectionView.reloadData()
+                self?.popularCollectionView.reloadData()
+                self?.specialsCollectionView.reloadData()
+            
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
     private func registerCells() {
